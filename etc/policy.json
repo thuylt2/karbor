@@ -1,0 +1,42 @@
+{
+    "context_is_admin": "role:admin",
+    "admin_or_owner":  "is_admin:True or project_id:%(project_id)s",
+    "default": "rule:admin_or_owner",
+
+    "admin_api": "is_admin:True",
+
+    "plan:create": "rule:admin_or_owner",
+    "plan:update": "rule:admin_or_owner",
+    "plan:delete": "rule:admin_or_owner",
+    "plan:get": "rule:admin_or_owner",
+    "plan:get_all": "rule:admin_or_owner",
+
+    "restore:create": "rule:admin_or_owner",
+    "restore:update": "rule:admin_or_owner",
+    "restore:get": "rule:admin_or_owner",
+    "restore:get_all": "rule:admin_or_owner",
+
+    "protectable:get": "rule:admin_or_owner",
+    "protectable:get_all": "rule:admin_or_owner",
+
+    "provider:get": "rule:admin_or_owner",
+    "provider:get_all": "rule:admin_or_owner",
+    "provider:checkpoint_get": "rule:admin_or_owner",
+    "provider:checkpoint_get_all": "rule:admin_or_owner",
+    "provider:checkpoint_create": "rule:admin_or_owner",
+    "provider:checkpoint_delete": "rule:admin_or_owner",
+
+    "trigger:create": "",
+    "trigger:delete": "rule:admin_or_owner",
+    "trigger:update": "rule:admin_or_owner",
+    "trigger:get": "rule:admin_or_owner",
+    "trigger:list": "",
+
+    "scheduled_operation:create": "",
+    "scheduled_operation:delete": "rule:admin_or_owner",
+    "scheduled_operation:get": "rule:admin_or_owner",
+    "scheduled_operation:list": "",
+
+    "operation_log:get": "rule:admin_or_owner",
+    "operation_log:get_all": "rule:admin_or_owner"
+}

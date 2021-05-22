@@ -1,0 +1,659 @@
+CHANGES
+=======
+
+0.5.1
+-----
+
+* Fix checkpoints pagination error
+* Add project\_id in neutron operations
+* Fix restore security group error
+* Remove network dependency of server resource
+* Update UPPER\_CONSTRAINTS\_FILE for stable/pike
+* Update .gitreview for stable/pike
+
+0.5.0
+-----
+
+* Convert DOS newlines to Unix newlines
+* Fixes the wrong resources status after restore was finished
+* Fix port restore in neutron protection plugin
+* Set OperationLog operation\_type to be a string
+* Fix neutron protection plugin exceptions
+* Sql: change Restore parameters types to text
+* docs: add protection plugins developer guide
+* Add Protectable Plugins Development Guide doc to Karbor
+* Add the extra\_info parameter when checkpoint being created manually
+* Support swift auth domain name
+* Fix log info error
+* Ignore plan parameters for unloaded plugins
+* Imported Translations from Zanata
+* Updated from global requirements
+* Add api definition doc for operation log RESTful API
+* Update the configuration options in the karbor.conf.sample
+* Remove all codes about Heat
+* Updated from global requirements
+* Update the exception class of the plugins
+* Add spec for operation log RESTful API
+* Add usage for other providers in devstack dir
+* Add extra\_info when creating checkpoint in scheduled operation
+* Remove 'HeatTemplate'
+* Remove install-guide env which is no longer effective
+* Fix a method name typo of nova protection plugin
+* Add troveclient to test-requirements
+* Install some providers on devstack only
+* Updated from global requirements
+* Add Bank Plugins Development Guide doc to Karbor
+* Add operation\_log API for karbor
+* Docs: Arrange Admin Guide
+* Docs: Arrange Contributor Guide
+* Add deletion of the failed image
+* Fix glance image restore error
+* Docs: Arrange Configuration Guide
+* Docs: Arrange Install Guide
+* Docs: enable warning-is-error, fix errors
+* FS Bank: raise correct exceptions
+* FS Bank: change umask to 022
+* Refactor network restore function
+
+0.4.0
+-----
+
+* Update way of retrieving parameters when using TaskFlow
+* Replace six.iterkeys with dict.keys()
+* Update URLs in documentation
+* Add option to enable or disable providers
+* Add the spec for trove database proection plugin
+* Increase s3 bank plugin
+* Add choices field in config definition
+* Fix warning in doc generating
+* Fixed order of arguments in assertEqual
+* Add trove database instance protection plugin for karbor
+* Update URL home-page in documents according to document migration
+* Updated from global requirements
+* Update URLs in documents according to document migration
+* Delete the Neutron config introduced with manila service
+* Add trove database instance protectable plugin for karbor
+* fix releasenotes
+* Do not maintain data\_files in setup.cfg
+* Increase s3 bank plugin
+* Refactor server restore function
+* Migration from oslo\_sphinx to openstackdocstheme
+* Generate the karbor.conf.sample with oslo-config-generator
+* Operation Engine: Remove the triggered state
+* Add a whitespace between description
+* Update the data module of operation\_log
+* Fix bug: karbor-protection can not load provider-registry
+* Update the param name in policy.enforce function
+* Optimize install-guide documentation structure
+* Updated from global requirements
+* Implement network protection plugin(for DeleteOperation)
+* Updated from global requirements
+* Provide user friendly messages for db sync
+* Implement neutron network protection plugin
+* Fix setting the key of default manila share-type failed
+* Implement neutron network protectable plugin
+* Fix the error about the translation of KarborException message
+* Remove Horizon from gate's devstack
+
+0.3.0
+-----
+
+* Add Cinder snapshot plugin implementation for karbor
+* Updated from global requirements
+* Remove unnecessary setUp function in testcase
+* Updated from global requirements
+* Use get\_rpc\_transport instead of get\_transport
+* Replace LOG.warn with LOG.warning
+* Add a fullstack test for the file system based bank
+* The file system based bank implementation
+* Fix html\_last\_updated\_fmt for Python3
+* Add a verification about restore's parameter
+* Trivial fix typos
+* Refactor resource.py/Resource
+* Updated from global requirements
+* Updated from global requirements
+* Add manila share protection plugin for karbor
+* Refactor volume restore function
+* Use uwsgi for devstack
+* Add a verification about the protect property of plan's parameter
+* Updated from global requirements
+* Add spec for cinder volume snapshot plugins
+
+0.2.1
+-----
+
+* Updated from global requirements
+* Add requires parameter of 'restore'
+* remove reduplicative fuction definition of 'status\_poll'
+* Replace assertRaisesRegexp with assertRaisesRegex
+* Fix fullstack error about a share protectable test
+* Updated from global requirements
+* Spec: remove Heat
+* Updated from global requirements
+* Remove redundant ctor super calls, add missing
+* Fix fullstack error about one test
+* Trivial fix typos in documents
+* Set git info for python-karborclient
+* Add more credentials information to check\_is\_admin
+* Use to\_policy\_values for enforcing policy
+* Remove dependecy testrepository
+* Updated from global requirements
+* Remove unnecessary setUp function in testcase
+* Change the comment in wsgi.py
+* Use context.from\_dict to determine available arguments
+* Remove nova-cert from devstack
+* Add fullstack test for share protectable plugin
+* Add manila share protectable plugin for karbor
+* Fix fullstack gate error about 'Too many connections'
+* devstack: clone karborclient if marked to
+* Updated from global requirements
+* Fix updating the status metadata of checkpoint in volume plugin
+* Make several configuration property as secret
+* Fix error in doc
+* Add install-guide for karbor
+* Add a fullstack test protecting a server which boots from a volume
+* Fix: reference an undefined attribute of 'msg' of Exception
+* Updata the api doc about the extra\_info filed of protectable API
+* Add manila client for karbor
+* Fix fullstack test errors about authorization
+* Enable coverage report when testing coverage
+* Add the process about the schema parameter of the cinder plugin
+* Remove usage of parameter enforce\_type
+* Support file system based bank implementation
+* Optimize the link address
+* Updated from global requirements
+* Add karbor-api WSGI support in devstack
+* Removing unnecessary config definition
+* Add deploying karbor-api with mod-wsgi
+* Use wsgi module from oslo.service
+* Updated from global requirements
+* Add a check about the range of the parameter 'offset'
+* Add extra\_info field to the resource database table of plan API
+* Use HostAddressOpt for opts that accept IP and hostnames
+* Updated from global requirements
+* Extracted HTTP response codes to constants
+* Add extra\_info field to the response of instances API
+* Fix the configuration name about base URL of karbor api
+* Replace (str, unicode) with six.string\_types
+* Get rid of timezone info for all time fields of versioned objects
+* Add default password modification in devstack
+* Updated from global requirements
+* Add spec for manila share protection plugins
+* Switch crontab to calendar
+* Fix the error of escape character in calendar\_time.py
+* Use HostAddressOpt for opts that accept IP and hostnames
+* different conf in CI and system install with devstack
+* Fix scheduled operation api validate
+* Update fullstack efficiency
+* Replace json with jsonutils
+* Remove unused variable's local value
+* Remove log translations
+* Respect Certificates and CAs in clients
+* Use more specific asserts in tests
+* Updated from global requirements
+* Updata the api definition of checkpoint API
+* Replace six.iteritems() with .items()
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
+* Add metadata parameter to checkpoint API
+* client\_factory, keystone plugin: lazy init
+* removed the older version of python
+* Updated from global requirements
+* operation-engine: unsingleton managers
+* [Fix gate]Update test requirement
+* fullstack: search for default image
+* Remove unused logging import
+* Add and use Karbor beaver mascot
+* etc/karbor.conf URL error
+* Support to execute specific fullstack test
+* Unit test may failed without client\_factory.init()
+* Update usage.rst
+* Support clients with privileged user in karbor
+* Update fullstack efficiency
+
+0.2.0
+-----
+
+* devstack: add placement-api
+* Remove support for py34
+* Remove unused modules of karbor
+* Update the nova backup protection plugin
+* cinder protection: force create snapshot
+* Raise a HTTPNotFound 404 exception when instance can not be found
+* keystone: move to v3
+* swift-plugin: lazy load of swift connection
+* bank: fix list\_objects using stricter validations
+* bank: Remove create\_object
+* ocata: release notes
+* Add restore resources\_status
+* noop: update name and description
+* docs: build modindex, add plugins
+* fullstack: create server with explicit network
+* Remove link to modindex
+* Updated from global requirements
+* Fix token expire wich may happen in using clients
+* Update the glance backup protection plugin
+* Update the way of getting endpoint of other service
+* Fix typo
+* Delete support for py33
+* Updated from global requirements
+* Cinder Protection Plugin: Backup from snapshot
+* Typo fix: completly => completely
+* Checkpoint list bug
+* Add 'Restore Resources Status' spec
+* Add offset support for paginate\_query in karbor
+* Fix create trust failed
+* Fix the errors about nova client creation
+* Prepare for refactoring clients used in protect service
+* Add validation for the parameter provider\_id in checkpoint POST API
+* Add trace log for task and flow in karbor protection service
+* Remove logging import unused
+* Heat url error in local.conf.sample
+* Refactor fullstack clients
+* Fix the errors about the protectable API reference documentation
+* Update the Cinder Backup Protection Plugin
+* Add Restore parameter to protection plugin doc
+* Don't create Heat Stack when template is empty
+* Enable heat plugin in devstack sample and docs
+* Removes unnecessary utf-8 coding
+* Updated from global requirements
+* Use parenthesis instead of slash for multiline
+* fix scheduledoperation fullstack
+* Refactor flows
+* Fix checkpoint fullstack
+* Replace 'tenant\_id' to 'project\_id' for Karbor's endpoints
+* Purge deleted rows data
+* Stabilize Protection Plugin API
+* Add attached volume fullstack
+* Updated from global requirements
+* Delete the unnecessary codes of clients/swift.py
+* Database purge deleted rows spec
+* Add plan and date filter parameters for checkpoint list API
+* Add Heat plugin to devstackgaterc
+* fullstack: don't reinstall virtualenv
+* Revert "Print PROJECTS before devstack-vm-gate"
+* Temporarily remove rst from gitattributes
+* Print PROJECTS before devstack-vm-gate
+* Revert "Save fullstack gate logs"
+* [TrivialFix] Fix test function typo error
+* [TrivialFix] Fix comment typo error
+* Print trace log when unknown exception happended
+* Fix loading 'provider\_config\_dir' opt error
+* Replace dos newlines with unix newlines in spec
+* Restore .gitattributes
+* Remove .gitattributes temporeraly
+* Add .gitattributes file
+* Save fullstack gate logs
+* [TrivialFix] Fix dir doc typo error
+* Replace dos newlines with unix newlines
+* Fix node being added twice when packing a graph
+* Print the stack trace logs when the plugins are not successfully loaded
+* Kill the green thread immediately if it is sleeping
+* Don't send canceled operation to executor
+* Add sort and pagination parameters for karbor api-def doc
+* Updated from global requirements
+* The spec about adding extra\_info field to the response of instances API
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Modify smaug to karbor
+* fix typo in karbor.api.middleware.auth.py
+* Add Created\_at field to checkpoint list/show API
+* Typo in bank-plugin-lease.rst
+* Raise ProviderNotFound from ProviderRegistry
+* Corrected README.rst overline and underline issue
+* Typo in api-service.rst
+* Update descriptions in CONTRIBUTING.rst
+* Fix the typo of the readme.rst
+* Turn windows endlines into unix endlines
+* fix Eisoo provider load error
+* Remove cfg import unused
+* Replace 'assertTrue(a in b)' with 'assertIn(a, b)'
+* Support fuzzy filtering for the list API of Plan
+* Update Protection Plugin Spec
+* Fixed typos and wordings in doc/source/readme.rst
+* Spec: Refactor the clients used in protect service
+* Show team and repo badges on README
+* add eisoo client factory
+* Fix typo in image\_protection\_plugin.py
+* Use proper assert check
+* fix api-ref for restore
+* Add fullstack for scheduled operation
+* Update requirements
+* Update .gitignore
+* Fix devstack plugin
+* Updated from global requirements
+* Replace six.iteritems with dict.items()
+* Support icalendar time format without the crontab mentions
+* Optimize time trigger: use instance of time format instead of class itself
+* Replaces uuid.uuid4 with uuidutils.generate\_uuid()
+* Fix compute next time in green thread of trigger
+* Set access\_policy for messaging's dispatcher
+* Replace LOG.warn with LOG.warning
+* Fix test requirements
+* Set local for tox
+* Fix the singleton pattern in operation engine
+* Support keystone v3 completely
+* Fix restore fullstack
+* Fix the error about the CA certificate parameters for Keystone clients
+* Extract public function
+* Add versioned object of checkpoint\_records table
+* Add checkpoint\_records table of db
+* cross platform support
+* Update usage.rst
+* Restore: initialize heat client using current login tenant by default
+* Updated from global requirements
+* Support Cinder V3 API in Karbor
+* Optimize time trigger: remove the interval variable '\_next\_run\_time'
+* Optimize time trigger: Move the context to be held in green thread
+* Support relative path
+* Updated from global requirements
+* Fix the authorization of swift when karbor is installed using devstack
+* Added release-notes for karbor
+* Add CA certificate parameters for Keystone clients
+* Fix checkpoint fullstack
+* Enable DeprecationWarning in test environments
+* restore: update success only upon heat complete
+* Updated from global requirements
+* Update .coveragerc after the removal of openstack directory
+* Encapsulate smaug client in Operation Engine
+* Add parameters field for protectable instances API
+* Updated from global requirements
+* Drop MANIFEST.in - it's not needed by pbr
+* Fix LOG.warn to LOG.warning
+* Add a new executor for Operation Engine service
+* Update the way of using karbor client in operation class
+* Update test cases for operation manager
+* Correct logging translation markers
+* Fix the none error
+* Remove setup.cfg version
+
+0.1.0
+-----
+
+* Use upper-constraints for tox envs
+* Updated from global requirements
+* Add restores api-ref
+* Add triggers api-ref
+* Add scheduled operations api-ref
+* Add providers api-ref
+* Add protectables api-ref
+* Add checkpoints api-ref
+* Add plans api-ref
+* Refactor the dos newlines to unix
+* Optimize status getter into a set
+* Allow deletion of erroneous checkpoints
+* Allow restore only when checkpoint is available
+* Fix DevStack Setup Exception
+* Add CA certificate parameters for OpenStack clients
+* The spec about adding parameters field for instances API
+* TrivialFix: Remove default=None when set value in Config
+* Modify use of assertTrue(A in B)
+* Use method check\_string\_length from oslo.utils
+* Add restore\_auth to restore
+* Update homepage with developer documentation page
+* Support multiple executors to choose for scheduled operation
+* Add server plugin to setup.cfg, default provider
+* Fix typos in manager.py & test\_common.py
+* Add a filter processing for the parameter of restore
+* Use assertIn(A, B) instead of assertTrue(A in B)
+* Fix api doc error and classify parameters
+* Fix a typo in bank.md
+* docs: fix 3 tier app image, remove tolkien passage
+* Add a description field for resource plan
+* TrivialFix: Remove logging import unused
+* Change trigger update method into put
+* Move restore auth parameters to restore\_auth attr
+* Fix missing to convert the format of ScheduledOperation
+* Add frame for api reference
+* Remove hard code in api
+* Keep id consistent
+* List providers for tenants
+* cinder protection: fix schema description's field
+* Update the restore part of api doc
+* Update the checkpoint part of api doc
+* Update the provider part of api doc
+* Updated from global requirements
+* Fix the api doc part of scheduled operation
+* Update the api doc part of protectable
+* Update the api doc part of plan
+* Update configuration, requirements to karbor
+* Updated from global requirements
+* Rename smaug to karbor in docs
+* test: make enforce\_type=True in CONF.set\_override
+* update typos from eumn to enum
+* Update the api doc part of scheduled operation
+* Update the api doc part of trigger
+* Add Python 3.5 classifier and venv for smaug
+* Replace assertDictEqual() with assertEqual() For smaug
+* Add suspend/resume operation interface in Operation Engine
+* Add a 'enabled' filed to scheduled\_operations table in DB
+* Fix Fullstack's devstack
+* Add abstract method in ProtectablePlugin base class
+* Don't override default value of config option sqlite\_db
+* Rename Smaug DevStack to Karbor
+* Updated from global requirements
+* Change Smaug to Karbor
+* Fix plan parameters verify exception
+* Fix Swift Bank Plugin Headers
+* Fix Scheduled Operation Creation failed
+* Updated from global requirements
+* Support checkpoint scheduled clean
+* Remove unused code related with config option sqlite\_db
+* Support checkpoint metadata
+* Add exception message translations
+* Correct reraising of exceptions
+* Add description to Scheduled Operation
+* Update the 'get' function of ScheduledOperationState
+* Add fullstack tests of the resource restores RESTAPI
+* Fix several typos
+* add list and get fullstack for checkpoint
+* Updated from global requirements
+* Fix several typos
+* Remove aliases of rpc backend for messaging
+* Remove discover from test-requirements
+* Fix UsageExample
+* Add image protection plugin in openstack-infra.conf
+* Implement Nova restoration
+* Implement nova protection plugin
+* Add user trust manager
+* Add the interface of Creating trust to smaug
+* Implement keystone client plugin
+* Add serialized resource\_graph info in Checkpoint to\_dict function
+* Fix bugs in delete image backup
+* Add venv script for smaug
+* Fix image protection plugins not being successfully loaded
+* Fixed argment of the trigger-create command indicated on Usage
+* Remove the windows style characters
+* Fix having provider\_id in field protection\_plan of checkpoint api
+* Implement Glance restoration
+* Add parameters and resource name fields to plan RESTAPI
+* Updated from global requirements
+* Update the CheckpointView model
+* Fix image protectable
+* Match smaugclient change, create returns an object
+* fullstack: use objects in fullstack tests
+* fullstack: create objects infrastructre
+* Update devstackgaterc
+* Add trust\_id to db table 'scheduled\_operation\_state'
+* Implement protect operation
+* Implement the scheduled operation base class
+* Remove oslo-incubator related stuff
+* List checkpoints: return a dictionary, not object
+* Implement list checkpoints
+* Fix show\_checkpoint
+* plan: allow plan with empty dict parameters
+* Implement show\_checkpoint
+* updata the class model of provider
+* Add fullstack tests of the resource checkpoints RESTAPI
+* Fix protection service parse protect/restore parameters
+* Fix default provider config for fullstack
+* docs: update mission statement, diagram, toc
+* devstackgaterc for controlling fullstack config
+* Add a usage example for smaug
+* Updated from global requirements
+* Implement cinder volume backup deletion
+* Add fullstack tests of the resource protectables RESTAPI
+* fix the version of novaclient in smaug\_base.py
+* Add "sort\_dir" parameter for list\_objects in BankPlugin
+* Add list function to scheduled operation log
+* Add user\_id to db table 'scheduled\_operations'
+* Fix list protectable API error
+* Fix bugs for the heat\_client create
+* Fix fullstack tests of the resource plan and provider
+* Expect exceptions in Protection Service
+* Fix cmd provider list not returning the value of extended\_info\_schema
+* Add Smaug Trello board to documentation
+* Add reno release notes to Smaug
+* Checkpoints to use a unique sub-section
+* Updated from global requirements
+* Replace dos newlines
+* Fix several bugs about Operation Engine service
+* Fix create checkpoint API errors in protection service
+* Fix bank and protection plugins not being successfully loaded
+* Fix wrong definition of schema method
+* Implement executor of OperationEngine
+* Updated from global requirements
+* [API] Add name property to Resource model
+* Add serialize and deserialize functions for resource\_graph
+* Enable heat in the local conf
+* Fix bug in unpack\_graph
+* fix requirements.txt for smaug
+* Fix the format of restores parameters
+* Fix minor issues with code formatting
+* Protection Provider use Bank to wrap BankPlugin
+* Store ResourceGraph and Plan in checkpoint
+* Remote Restore states from possible checkpoint states
+* Updated from global requirements
+* Update Protection Plugin Design
+* Enable lease checking for checkpoint
+* The resource graph walker listener
+* Implement Cinder Restoration
+* Move swift client to be created by ClientFactory
+* Updated from global requirements
+* Add fullstack tests of the resource plan
+* Add fullstack tests of the resource providers
+* Updated from global requirements
+* Fix SwiftBankPlugin
+* Add fullstack tests of triggers
+* Updated from global requirements
+* Updated from global requirements
+* Implement sync cinder status
+* Updated from global requirements
+* remove verbose option in devstack plugin
+* Fix context of protectable plugin
+* Implement glance protection plugin
+* Fix loading smaug-swift-bank-plugin error when starting smaug-protection service
+* Implement the restoration flow
+* Implement HeatTemplate for restore
+* update local.conf of smaug
+* Implement cinder protection plugin
+* Move operationengine to services directory
+* [API] Add resource endpoint
+* Add operation log endpoints to API document
+* The versioned object and db operation of operation\_log
+* Fix creating resource plan error
+* BankSection: implement get sub-section
+* Fix fullstack test\_plan\_list
+* Create BankCheckpointCollection implementation
+* Fix resource name can not be inserted into db
+* Make Plan parameterss a DictOfDict
+* Fix the wrong calling list\_protectable\_dependents
+* Implement restart of Operation Engine service
+* Add fullstack test to smaug
+* Add a field parameters to resource plans
+* Add show protectables instance endpoint
+* Add name property to protectable instances model
+* Implement the protection flow
+* Implement the workflow
+* Fix serialized\_meta in SwiftBankPlugin
+* Add croniter as requirement, devstack providersd
+* Implement Graph pack and unpack
+* Add providers.d directory to setup.cfg
+* Fix init\_host of protection service
+* Implement RestAPIs of Scheduled Operation
+* Implement RestAPIs of trigger
+* Add checkpoint id to the response of the checkpoint POST action
+* API: Trigger, ScheduledOperation structural fixes
+* graph: add test to verify diamond dependence
+* Protection manager register protectable plugins
+* Manual update from global-requirements
+* Fix Provider RPC client and server do not match
+* Implement time trigger with Eventlet
+* Implement rpc interfaces of OperationEngine
+* Add project protectable and dependencies
+* Restore design spec (protection service level)
+* Fix python3 compatibility
+* Split Provider configuration into files
+* Fix SwiftBankPlugin
+* Delete the wrong parameter in the method checkpoints\_delete
+* Fix missing "enabled\_providers" in global config
+* Basic design doc for API Service
+* Add dashboard to Local.conf
+* Implement Provider and ProviderRegistry
+* Implement operation manager
+* Protection service basic design doc
+* client\_factory: use classmethod, remove instance
+* Implement glance protectable plugin
+* Implement protectable RPC handlers
+* Implement nova protectable plugin
+* Implement the ProtectableRegistry
+* Implement Neutron service client
+* Implement cinder protectable plugin
+* Proposed Smaug API v1.0
+* Implement Cinder service client
+* Implement Nova service client
+* Implement Glance service client
+* Implement the common logic for service client
+* RPC client recreates exception object failed
+* docs: fix operation\_engine\_design rst syntax
+* Implement swift bank plugin
+* Replace dos endlines into unix endlines
+* Implement Bank Section
+* The RESTAPI of resource checkpoints
+* The RESTAPI of resource providers
+* The RESTAPI of resource protectables
+* The RESTAPI of resource Restore
+* The versioned object and db operation of Restores
+* Implement the GET and DELETE RESTAPI of resource plans
+* Implement versioned object of scheduled\_operation\_states table
+* Implement versioned object of scheduled\_operation\_log table
+* Split BankPlugin interface
+* The basic function modules of pagination, sort and filter
+* Introduce Graph walker
+* Implement the POST and PUT RESTAPI of resource plans
+* Implement versioned object of triggers table
+* Implement versioned object of scheduled\_operation table
+* Implement scheduled\_operations table of db
+* Integrate graph building with the ProtectableRegistry
+* Implement the versioned object and db operation of plans
+* Fix the field's order of db tables
+* Implement triggers table of db
+* Implement scheduled\_operation\_states table of db
+* Implement scheduled\_operation\_logs table of db
+* Protectable module code framework
+* Implement graph builder
+* Make ProtectionPlugin abstract
+* Pluggable protection provider doc
+* Move protection service
+* Implement the basic protection service framework
+* operation engine design
+* Basic design doc for Bank Plugin lease
+* Init api service database tables definition
+* Introduce oslo.versionedobjects to smaug
+* Fix not calling rpc.init(CONF) in basic Service class
+* Clean flake8 ignore
+* basic protection service: Implement a runnable service
+* basic OperationEngine service: Implement a runnable service
+* Add Smaug spec directory
+* First draft of the API documentation
+* basic OperationEngine service: Service class for binaries running on hosts
+* basic API service: Create the base DAL into the DB
+* Fix a spelling mistake of smaug in wsgi module
+* Authentication fails by keystonemiddleware
+* Fix the keyerror:"tenant\_name" when writing log
+* Remove kombu as a dependency for Smaug
+* Initial devstack script
+* basic API service
+* Resize project logo images
+* Initial Cookiecutter Commit
+* Added .gitreview

@@ -1,0 +1,48 @@
+[console_scripts]
+karbor-api = karbor.cmd.api:main
+karbor-manage = karbor.cmd.manage:main
+karbor-operationengine = karbor.cmd.operationengine:main
+karbor-protection = karbor.cmd.protection:main
+
+[karbor.database.migration_backend]
+sqlalchemy = oslo_db.sqlalchemy.migration
+
+[karbor.operationengine.engine.executor]
+green_thread = karbor.services.operationengine.engine.executors.green_thread_executor:GreenThreadExecutor
+thread_pool = karbor.services.operationengine.engine.executors.thread_pool_executor:ThreadPoolExecutor
+
+[karbor.operationengine.engine.timetrigger.time_format]
+calendar = karbor.services.operationengine.engine.triggers.timetrigger.timeformats.calendar_time:ICal
+crontab = karbor.services.operationengine.engine.triggers.timetrigger.timeformats.crontab_time:Crontab
+
+[karbor.protectables]
+database = karbor.services.protection.protectable_plugins.database:DatabaseInstanceProtectablePlugin
+image = karbor.services.protection.protectable_plugins.image:ImageProtectablePlugin
+network = karbor.services.protection.protectable_plugins.network:NetworkProtectablePlugin
+project = karbor.services.protection.protectable_plugins.project:ProjectProtectablePlugin
+server = karbor.services.protection.protectable_plugins.server:ServerProtectablePlugin
+share = karbor.services.protection.protectable_plugins.share:ShareProtectablePlugin
+volume = karbor.services.protection.protectable_plugins.volume:VolumeProtectablePlugin
+
+[karbor.protections]
+karbor-database-protection-plugin = karbor.services.protection.protection_plugins.database.database_backup_plugin:DatabaseBackupProtectionPlugin
+karbor-fs-bank-plugin = karbor.services.protection.bank_plugins.file_system_bank_plugin:FileSystemBankPlugin
+karbor-image-protection-plugin = karbor.services.protection.protection_plugins.image.image_protection_plugin:GlanceProtectionPlugin
+karbor-network-protection-plugin = karbor.services.protection.protection_plugins.network.neutron_protection_plugin:NeutronProtectionPlugin
+karbor-noop-protection-plugin = karbor.services.protection.protection_plugins.noop_plugin:NoopProtectionPlugin
+karbor-s3-bank-plugin = karbor.services.protection.bank_plugins.s3_bank_plugin:S3BankPlugin
+karbor-server-protection-plugin = karbor.services.protection.protection_plugins.server.nova_protection_plugin:NovaProtectionPlugin
+karbor-share-protection-plugin = karbor.services.protection.protection_plugins.share.share_snapshot_plugin:ManilaSnapshotProtectionPlugin
+karbor-swift-bank-plugin = karbor.services.protection.bank_plugins.swift_bank_plugin:SwiftBankPlugin
+karbor-volume-protection-plugin = karbor.services.protection.protection_plugins.volume.cinder_protection_plugin:CinderBackupProtectionPlugin
+karbor-volume-snapshot-plugin = karbor.services.protection.protection_plugins.volume.volume_snapshot_plugin:VolumeSnapshotProtectionPlugin
+
+[karbor.provider]
+provider-registry = karbor.services.protection.provider:ProviderRegistry
+
+[oslo.config.opts]
+karbor.common.opts = karbor.common.opts:list_opts
+
+[wsgi_scripts]
+karbor-wsgi = karbor.wsgi.wsgi:initialize_application
+

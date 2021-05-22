@@ -1,0 +1,550 @@
+# variables in header
+request_id:
+  description: |
+    A unique ID for tracking service request. The request ID associated
+    with the request by default appears in the service logs.
+  in: header
+  required: true
+  type: UUID
+
+# variables in path
+checkpoint_id_1:
+  description: |
+    The UUID of a checkpoint.
+  in: path
+  required: true
+  type: UUID
+operation_id_1:
+  description: |
+    The UUID of the scheduled operation.
+  in: path
+  required: true
+  type: UUID
+operation_log_id_1:
+  description: |
+    The UUID of the operation log.
+  in: path
+  required: true
+  type: UUID
+protectable_type_1:
+  description: |
+    The name of a specified protectable type.
+  in: path
+  required: true
+  type: string
+provider_id_1:
+  description: |
+    The UUID of a provider.
+  in: path
+  required: true
+  type: UUID
+resource_id:
+  description: |
+    The UUID of a resource.
+  in: path
+  required: true
+  type: UUID
+restore_id_1:
+  description: |
+    The UUID of the restore.
+  in: path
+  required: true
+  type: UUID
+tenant_id:
+  description: |
+    The UUID of the tenant in a multi-tenancy cloud.
+  in: path
+  required: true
+  type: string
+trigger_id_1:
+  description: |
+    The UUID of the trigger.
+  in: path
+  required: true
+  type: UUID
+
+
+# variables in query
+limit:
+  description: |
+    Requests a page size of items. Returns a number
+    of items up to a limit value. Use the ``limit`` parameter to make
+    an initial limited request and use the ID of the last-seen item
+    from the response as the ``marker`` parameter value in a
+    subsequent limited request.
+  in: query
+  required: false
+  type: integer
+marker:
+  description: |
+    The ID of the last-seen item. Use the ``limit``
+    parameter to make an initial limited request and use the ID of the
+    last-seen item from the response as the ``marker`` parameter value
+    in a subsequent limited request.
+  in: query
+  required: false
+  type: string
+sort:
+  description: |
+    Comma-separated list of sort keys and optional
+    sort directions in the form of < key > [: < direction > ]. A valid
+    direction is ``asc`` (ascending) or ``desc`` (descending).
+  in: query
+  required: false
+  type: string
+
+
+# variables in body
+checkpoint:
+  description: |
+    A ``checkpoint`` object.
+  in: body
+  required: true
+  type: object
+checkpoint_id:
+  description: |
+    The UUID of the checkpoint.
+  in: body
+  required: true
+  type: UUID
+checkpoint_id_2:
+  description: |
+    The UUID of the checkpoint.
+  in: body
+  required: false
+  type: UUID
+checkpoint_list:
+  description: |
+    The list of ``checkpoint`` objects.
+  in: body
+  required: true
+  type: array
+checkpoint_status:
+  description: |
+    The status of checkpoint. A valid value is ``error``, ``protecting``,
+    ``available``, ``deleting``, ``deleted`` or ``error-deleting``.
+  in: body
+  required: true
+  type: string
+dependent_resources:
+  description: |
+    All dependent resources for a given protectable instance, It can be an
+    empty list.
+  in: body
+  required: true
+  type: array
+dependent_types:
+  description: |
+    All dependent protectable type, It can be an empty list.
+  in: body
+  required: true
+  type: array
+description:
+  description: |
+    The description for this object, resource, operation and so on. May be
+    ``NULL``.
+  in: body
+  required: true
+  type: string
+enabled:
+  description: |
+    "``1``" means ``Enable``, "``0``" means ``Disable``.
+  in: body
+  required: true
+  type: int
+ended_at:
+  description: |
+    The ended time of the operation.
+  in: body
+  required: false
+  type: string
+error_info:
+  description: |
+    The error info of of the operation.
+  in: body
+  required: false
+  type: dict
+extra_info:
+  description: |
+    The extra information for checkpoint.
+  in: body
+  required: false
+  type: dict
+extra_info_1:
+  description: |
+    The extra info of of the operation.
+  in: body
+  required: false
+  type: dict
+links:
+  description: |
+    Links for transfer.
+  in: body
+  required: true
+  type: array
+operation:
+  description: |
+    A ``scheduled operation`` object.
+  in: body
+  required: true
+  type: object
+operation_definition:
+  description: |
+    The operation definition for scheduled operation, include ``provider_id``
+    and ``plan_id`` key.
+  in: body
+  required: true
+  type: dict
+operation_id:
+  description: |
+    The UUID of the scheduled operation.
+  in: body
+  required: true
+  type: UUID
+operation_id_2:
+  description: |
+    The UUID of the scheduled operation.
+  in: body
+  required: false
+  type: UUID
+operation_list:
+  description: |
+    The list of ``scheduled operation`` objects.
+  in: body
+  required: true
+  type: array
+operation_log:
+  description: |
+    A ``operation_log`` object.
+  in: body
+  required: true
+  type: object
+operation_log_id:
+  description: |
+    The UUID of the operation_log.
+  in: body
+  required: true
+  type: UUID
+operation_log_list:
+  description: |
+    The list of ``operation_log`` objects.
+  in: body
+  required: true
+  type: array
+operation_log_status:
+  description: |
+    The status of operation logs.
+  in: body
+  required: false
+  type: string
+operation_name:
+  description: |
+    The name of the scheduled operation.
+  in: body
+  required: true
+  type: string
+operation_type:
+  description: |
+    The type of the scheduled operation.
+  in: body
+  required: true
+  type: string
+operation_type_1:
+  description: |
+    The type of the operation acitons.
+  in: body
+  required: true
+  type: UUID
+plan:
+  description: |
+    A ``plan`` object.
+  in: body
+  required: true
+  type: object
+plan_id:
+  description: |
+    The UUID of the plan.
+  in: body
+  required: true
+  type: UUID
+plan_id_1:
+  description: |
+    The UUID of the plan.
+  in: body
+  required: false
+  type: UUID
+plan_list:
+  description: |
+    The list of ``plan`` objects.
+  in: body
+  required: true
+  type: array
+plan_name:
+  description: |
+    The name of the plan.
+  in: body
+  required: true
+  type: string
+plan_name_1:
+  description: |
+    The name of the plan.
+  in: body
+  required: false
+  type: string
+plan_parameters:
+  description: |
+    The specified parameters for plan.
+  in: body
+  required: true
+  type: dict
+plan_status:
+  description: |
+    The status of plan. A valid value is ``started`` or ``suspended``.
+  in: body
+  required: true
+  type: string
+plan_status_1:
+  description: |
+    The status of plan. A valid value is ``started`` or ``suspended``.
+  in: body
+  required: false
+  type: string
+protectable_instance:
+  description: |
+    A ``protectable_instance`` object.
+  in: body
+  required: true
+  type: object
+protectable_instance_id:
+  description: |
+    The UUID of a protectable instance.
+  in: body
+  required: true
+  type: UUID
+protectable_instance_list:
+  description: |
+    The list of ``protectable_instance`` objects.
+  in: body
+  required: true
+  type: array
+protectable_instance_name:
+  description: |
+    The name of a protectable instance.
+  in: body
+  required: true
+  type: string
+protectable_name:
+  description: |
+    The name of the protectable type.
+  in: body
+  required: true
+  type: string
+protectable_type:
+  description: |
+    All the available protection types.
+  in: body
+  required: true
+  type: array
+protectable_type_2:
+  description: |
+    A ``protectable_type`` object.
+  in: body
+  required: true
+  type: object
+protectable_type_3:
+  description: |
+    The name of a specified protectable type.
+  in: body
+  required: true
+  type: string
+provider:
+  description: |
+    A ``provider`` object.
+  in: body
+  required: true
+  type: object
+provider_id:
+  description: |
+    The UUID of the provider.
+  in: body
+  required: true
+  type: UUID
+provider_id_2:
+  description: |
+    The UUID of the provider.
+  in: body
+  required: false
+  type: UUID
+provider_list:
+  description: |
+    The list of ``provider`` objects.
+  in: body
+  required: true
+  type: array
+provider_name:
+  description: |
+    The name of the provider.
+  in: body
+  required: true
+  type: string
+resource_graph:
+  description: |
+    The resource graph of protection plan corresponding to the checkpoint.
+  in: body
+  required: true
+  type: array
+resources:
+  description: |
+    The list of all resources in plan.
+  in: body
+  required: true
+  type: array
+resources_1:
+  description: |
+    The list of all resources in plan.
+  in: body
+  required: false
+  type: array
+restore:
+  description: |
+    A ``restore`` object.
+  in: body
+  required: true
+  type: object
+restore_auth:
+  description: |
+    The authentication for restore, include "``type``" "``username``" and
+    "``password``" key.
+  in: body
+  required: true
+  type: dict
+restore_id:
+  description: |
+    The UUID of the restore.
+  in: body
+  required: true
+  type: UUID
+restore_id_2:
+  description: |
+    The UUID of the restore.
+  in: body
+  required: false
+  type: UUID
+restore_list:
+  description: |
+    The list of ``restore`` objects.
+  in: body
+  required: true
+  type: array
+restore_parameters:
+  description: |
+    specifies each resource or resource type paramters according to protection
+    plugin's restore schema.
+  in: body
+  required: true
+  type: dict
+restore_resource_reason:
+  description: |
+    Map of the reason for failure of each resource in the restore
+  in: body
+  required: true
+  type: dict
+restore_resource_status:
+  description: |
+    Map of the restore status for each resource
+  in: body
+  required: true
+  type: dict
+restore_status:
+  description: |
+    The status of restore. A valid value is "``started``" "``success``" or
+    "``failed``".
+  in: body
+  required: true
+  type: string
+restore_target:
+  description: |
+    The target of the restore operation.
+  in: body
+  required: true
+  type: string
+schema_extended_info:
+  description: |
+    The extended info schema for provider.
+  in: body
+  required: true
+  type: dict
+schema_restore:
+  description: |
+    The restore schema for provider.
+  in: body
+  required: true
+  type: dict
+schema_saved_info:
+  description: |
+    The saved info schema for provider.
+  in: body
+  required: true
+  type: dict
+started_at:
+  description: |
+    The started time of the operation.
+  in: body
+  required: false
+  type: string
+tenant_id_1:
+  description: |
+    The UUID of the tenant in a multi-tenancy cloud.
+  in: body
+  required: true
+  type: string
+trigger:
+  description: |
+    A ``trigger`` object.
+  in: body
+  required: true
+  type: object
+trigger_id:
+  description: |
+    The UUID of the trigger.
+  in: body
+  required: true
+  type: UUID
+trigger_list:
+  description: |
+    The list of ``trigger`` objects.
+  in: body
+  required: true
+  type: array
+trigger_name:
+  description: |
+    The name of the trigger.
+  in: body
+  required: true
+  type: string
+trigger_name_1:
+  description: |
+    The name of the trigger.
+  in: body
+  required: false
+  type: string
+trigger_properties:
+  description: |
+    The property list for trigger. it must include "``pattern``" and
+    "``format``", may include "``window``" "``start_time``" and "``end_time``".
+  in: body
+  required: true
+  type: dict
+trigger_properties_1:
+  description: |
+    The property list for trigger. it must include "``pattern``" and
+    "``format``", may include "``window``" "``start_time``" and "``end_time``".
+  in: body
+  required: false
+  type: dict
+trigger_type:
+  description: |
+    The type of the trigger.
+  in: body
+  required: true
+  type: string
